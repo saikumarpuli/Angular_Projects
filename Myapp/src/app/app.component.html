@@ -1,10 +1,59 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" xmlns:background-color="http://www.w3.org/1999/xhtml">
+  <div class="container">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="row">
+        <div class="col-lg-1" >
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+        <div class="col-lg-1">
+          <i class="fas fa-th-list"></i>
+        </div>
+        <div class="col-lg-1">
+          <i class="fas fa-th-large"></i>
+        </div>
+        <div class="col-lg-1">
+          <i class="far fa-trash-alt" (click)="delete();"></i>
+        </div>
+        <div class="col-lg-1">
+          <i class="far fa-edit" (click)="save();"></i>
+        </div>
+        <div class="col-lg-1">
+          <i class="fas fa-lock"></i>
+        </div>
+        <div class="col-lg">
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-lg-0-2"  type="search" name="notes" [(ngModel)]="userFilter.name"  placeholder="Type to filter by name">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<ul>
+  <li *ngFor="let user of records | filterBy: userFilter">
+    {{ user.name }}
+  </li>
+
+   <li *ngIf="(records | filterBy: userFilter).length === 0">
+    No matching elements
+  </li>
+</ul>
+ <div class="container">
+  <div class="row">
+    <div class="col-lg-4" style="background-color: antiquewhite"></div>
+    <div class="col-lg-8">{{date}} </div>
+ </div>
+  <div class="row">
+  <div class="col-lg-4" style="background-color: antiquewhite">
+    <span>{{notes}}</span>
+       <div *ngFor="let note of records">
+         <tr>{{note}}</tr>
+      </div>
+  </div>
+    <div class="col-lg-8">
+      <input [(ngModel)]="notes" type="text" placeholder="notes">
+    </div>
+  </div>
 </div>
-
-
-<router-outlet></router-outlet>
+<app-notes [records]="records"></app-notes>
