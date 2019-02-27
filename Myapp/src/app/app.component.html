@@ -29,7 +29,7 @@
     </div>
   </div>
 </nav>
-
+<!--
 <ul>
   <li *ngFor="let user of records | filterBy: userFilter">
     {{ user.name }}
@@ -39,21 +39,22 @@
     No matching elements
   </li>
 </ul>
+-->
  <div class="container">
   <div class="row">
-    <div class="col-lg-4" style="background-color: antiquewhite"></div>
-    <div class="col-lg-8">{{date}} </div>
+    <div class="col-lg-3" style="background-color: antiquewhite"></div>
+    <div class="col-lg-9">{{date}} </div>
  </div>
   <div class="row">
-  <div class="col-lg-4" style="background-color: antiquewhite">
+  <div class="col-lg-3" style="background-color: antiquewhite">
     <span>{{notes}}</span>
-       <div *ngFor="let note of records">
-         <tr>{{note}}</tr>
+       <div *ngFor="let note of records| filterBy: userFilter.name">
+         <tr (click)='touch(note);' [(ngModel)]="note" ngDefaultControl>{{ (note.length>35)? (note | slice:0:35)+'....':(note)  }}</tr>
       </div>
   </div>
-    <div class="col-lg-8">
+    <div class="col-lg-9">
       <input [(ngModel)]="notes" type="text" placeholder="notes">
     </div>
   </div>
 </div>
-<app-notes [records]="records"></app-notes>
+  <app-notes [records]="records"></app-notes>
