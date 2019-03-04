@@ -2,6 +2,10 @@
   width: 55px;
   height: 55px;
 }
+#carouselExampleIndicators{
+  align-items: center;
+}
+
 #search
 {
   width: 130px;
@@ -54,3 +58,4 @@
   color: #fff;
   vertical-align: center;
 }
+
