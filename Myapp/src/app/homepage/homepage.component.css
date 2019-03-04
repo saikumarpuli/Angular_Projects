@@ -16,15 +16,41 @@
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
   }
-#search:focus {
+#search {
+  padding: 0 16px;
+  border-radius: 2px 0 0 2px;
+  border: 0;
+  outline: 0 none;
+  font-size: 14px;
+  height: 36px;
   width: 100%;
 }
+ 
 #navigation{
   background-color: aqua;
-
- }
+  background-color: aqua;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
 
 #footer{
   background-color: aqua;
-
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+ }
+#signin{
+  background: #0078ff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #fff;
+  vertical-align: center;
 }

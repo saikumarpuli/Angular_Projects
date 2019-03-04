@@ -1,16 +1,21 @@
+<!----Header part started-->
 <div class="container-fluid">
   <header class="page-footer font-small blue" id="navigation">
 
-  <div class="pb-1 mt-1 mb-2 border-bottom" >
+  <div class="pb-1 mt-1 mb-0 border-bottom" >
     <div class="row">
       <div class="col-sm-1" >
-        <i class="fas fa-film fa-2x" id="movieicon" ></i>
-      </div>
+        <nav>
+          <a routerLink="/home" routerLinkActive="active" class="fa fa-home" aria-hidden="true" id="home">Home</a>
+        </nav>
+        </div>
       <div class="col-sm-7">
         <input type="text" placeholder="Search.." id="search">
       </div>
       <div class="col-sm-2">
-      <p (click)="login()">login/signup</p>
+        <nav>
+           <a routerLink="/login" routerLinkActive="active" id="signin">signin&signup</a>
+         </nav>
       </div>
       <div class="col-sm-2">
         <i class="fas fa-arrow-alt-circle-down fa-2x"></i>
@@ -18,9 +23,11 @@
     </div>
   </div>
   </header>
-  <app-signup></app-signup>
-  <app-login></app-login>
   <div>
+    <!-- Header part End -->
+
+
+
     <footer class="page-footer font-small blue" id="footer">
        <div class="footer-copyright text-center py-3">© 2019 Copyright:
         <a href="/"> Movie ticket booking</a>
@@ -28,3 +35,4 @@
     </footer>
   </div>
 </div>
+
