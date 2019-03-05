@@ -5,7 +5,9 @@
 #carouselExampleIndicators{
   align-items: center;
 }
-
+#data{
+  alignment: center;
+}
 #search
 {
   width: 130px;
