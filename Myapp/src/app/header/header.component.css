@@ -1,27 +1,13 @@
 
 
-#movieicon{
+#movieicon {
   width: 55px;
   height: 55px;
-}
-#search
-{
-  width: 130px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: white;
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
 }
 #search {
   padding: 0 16px;
   border-radius: 2px 0 0 2px;
-  border: 0;
+  border: 1PX;
   outline: 0 none;
   font-size: 14px;
   height: 36px;
@@ -30,8 +16,7 @@
 
 #navigation{
   background-color: aqua;
-  background-color: aqua;
-  position: fixed;
+  position: relative;
   left: 0;
   top: 0;
   width: 100%;
