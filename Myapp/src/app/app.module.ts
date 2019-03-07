@@ -9,6 +9,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { ThretreDetailsComponent } from './thretre-details/thretre-details.component';
+import { SelectSeatsComponent } from './select-seats/select-seats.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +20,8 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
     HeaderComponent,
     FooterComponent,
     MovieDetailsComponent,
+    ThretreDetailsComponent,
+    SelectSeatsComponent,
    ],
   imports: [
     BrowserModule,
