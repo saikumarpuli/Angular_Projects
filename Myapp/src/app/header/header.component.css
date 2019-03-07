@@ -4,13 +4,12 @@
   height: 55px;
 }
 #search {
-  padding: 0 16px;
+  padding: 20px 16px;
   border-radius: 2px 0 0 2px;
-  border: 1PX;
-  outline: 0 none;
   font-size: 14px;
   height: 36px;
   width: 100%;
+  position: static;
 }
 
 #navigation{
@@ -20,7 +19,6 @@
   top: 0;
   width: 100%;
   color: white;
-  text-align: center;
 }
 #signin{
   background: #0078ff;
