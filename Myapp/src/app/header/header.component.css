@@ -1,5 +1,4 @@
 
-
 #movieicon {
   width: 55px;
   height: 55px;
@@ -15,7 +14,7 @@
 }
 
 #navigation{
-  background-color: aqua;
+   background-color: aqua;
   position: relative;
   left: 0;
   top: 0;
